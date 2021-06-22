@@ -42,7 +42,7 @@ xlnx-firmware/zcu102/zcu102_zynqmp_fsbl.elf
 xlnx-firmware/zcu102/zcu102_system.dtb
 xlnx-firmware/zcu102/zcu102_pmufw.elf
 xlnx-firmware/zcu102/dpu.xclbin
-xlnx-firmware/common/boot.bin
+xlnx-firmware/common/image-selector/boot.bin
 xlnx-firmware/common/xilinx-hdmi-rx-edid.bin
 
 ---------------------------------------------------------------------------------------------------
