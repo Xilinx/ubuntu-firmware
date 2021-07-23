@@ -1,0 +1,424 @@
+// SPDX-License-Identifier: GPL-2.0
+/*
+ * dts file for KV260 DP subsystem
+ *
+ * (C) Copyright 2021, Xilinx, Inc.
+ *
+ * amit nagal <amitn@xilinx.com>
+ * swagath gadde <swagath.gadde@xilinx.com>
+ */
+
+/dts-v1/;
+
+/ {
+	compatible = "xlnx,zynqmp-sk-kv260-revA\0xlnx,zynqmp-sk-kv260-revY\0xlnx,zynqmp-sk-kv260-revZ\0xlnx,zynqmp-sk-kv260\0xlnx,zynqmp";
+
+	fragment1 {
+		target = <0xffffffff>;
+
+		__overlay__ {
+			#address-cells = <0x01>;
+			#size-cells = <0x00>;
+			pinctrl-names = "default\0gpio";
+			pinctrl-0 = <0x01>;
+			pinctrl-1 = <0x02>;
+			scl-gpios = <0xffffffff 0x18 0x00>;
+			sda-gpios = <0xffffffff 0x19 0x00>;
+
+			ina260@40 {
+				compatible = "ti,ina260";
+				#io-channel-cells = <0x01>;
+				label = "ina260-u14";
+				reg = <0x40>;
+				phandle = <0x03>;
+			};
+		};
+	};
+
+	fragment1a {
+		target = <0xffffffff>;
+
+		__overlay__ {
+
+			ina260-u14 {
+				compatible = "iio-hwmon";
+				io-channels = <0x03 0x00 0x03 0x01 0x03 0x02>;
+			};
+		};
+	};
+
+	fragment2 {
+		target = <0xffffffff>;
+
+		__overlay__ {
+			status = "okay";
+		};
+	};
+
+	fragment3 {
+		target = <0xffffffff>;
+
+		__overlay__ {
+			status = "okay";
+			ceva,p0-cominit-params = <0x18401828>;
+			ceva,p0-comwake-params = <0x614080e>;
+			ceva,p0-burst-params = <0x13084a06>;
+			ceva,p0-retry-params = <0x96a43ffc>;
+			ceva,p1-cominit-params = <0x18401828>;
+			ceva,p1-comwake-params = <0x614080e>;
+			ceva,p1-burst-params = <0x13084a06>;
+			ceva,p1-retry-params = <0x96a43ffc>;
+			phy-names = "sata-phy";
+			phys = <0xffffffff 0x01 0x01 0x02 0x7735940>;
+		};
+	};
+
+	fragment4 {
+		target = <0xffffffff>;
+
+		__overlay__ {
+			status = "disabled";
+			phy-names = "dp-phy0\0dp-phy1";
+			phys = <0xffffffff 0x06 0x00 0x00 0x19bfcc0 0xffffffff 0x06 0x01 0x00 0x19bfcc0>;
+		};
+	};
+
+	fragment9 {
+		target = <0xffffffff>;
+
+		__overlay__ {
+			status = "okay";
+		};
+	};
+
+	fragment10 {
+		target = <0xffffffff>;
+
+		__overlay__ {
+			status = "okay";
+			pinctrl-names = "default";
+			pinctrl-0 = <0x04>;
+
+			usb5744 {
+				compatible = "microchip,usb5744";
+				reset-gpios = <0xffffffff 0x2c 0x00>;
+				phandle = <0x09>;
+			};
+		};
+	};
+
+	fragment11 {
+		target = <0xffffffff>;
+
+		__overlay__ {
+			status = "okay";
+			dr_mode = "host";
+			snps,usb3_lpm_capable;
+			phy-names = "usb3-phy";
+			phys = <0xffffffff 0x04 0x00 0x01 0x18cba80>;
+			maximum-speed = "super-speed";
+		};
+	};
+
+	fragment12 {
+		target = <0xffffffff>;
+
+		__overlay__ {
+			status = "okay";
+			pinctrl-names = "default";
+			pinctrl-0 = <0x05>;
+			no-1-8-v;
+			disable-wp;
+			xlnx,mio-bank = <0x01>;
+		};
+	};
+
+	fragment13 {
+		target = <0xffffffff>;
+
+		__overlay__ {
+			#address-cells = <0x01>;
+			#size-cells = <0x00>;
+			status = "okay";
+			pinctrl-names = "default";
+			pinctrl-0 = <0x06>;
+			phy-handle = <0x07>;
+			phy-mode = "rgmii-id";
+
+			mdio {
+				#address-cells = <0x01>;
+				#size-cells = <0x00>;
+				reset-gpios = <0xffffffff 0x26 0x01>;
+				reset-delay-us = <0x02>;
+				phandle = <0x0a>;
+
+				ethernet-phy@1 {
+					#phy-cells = <0x01>;
+					reg = <0x01>;
+					ti,rx-internal-delay = <0x08>;
+					ti,tx-internal-delay = <0x0a>;
+					ti,fifo-depth = <0x01>;
+					ti,dp83867-rxctrl-strap-quirk;
+					phandle = <0x07>;
+				};
+			};
+		};
+	};
+
+	fragment14 {
+		target = <0xffffffff>;
+
+		__overlay__ {
+			status = "okay";
+
+			uart1-default {
+				phandle = <0x08>;
+
+				conf {
+					groups = "uart1_9_grp";
+					slew-rate = <0x01>;
+					io-standard = <0x01>;
+					drive-strength = <0x0c>;
+				};
+
+				conf-rx {
+					pins = "MIO37";
+					bias-high-impedance;
+				};
+
+				conf-tx {
+					pins = "MIO36";
+					bias-disable;
+				};
+
+				mux {
+					groups = "uart1_9_grp";
+					function = "uart1";
+				};
+			};
+
+			i2c1-default {
+				phandle = <0x01>;
+
+				conf {
+					groups = "i2c1_6_grp";
+					bias-pull-up;
+					slew-rate = <0x01>;
+					io-standard = <0x01>;
+				};
+
+				mux {
+					groups = "i2c1_6_grp";
+					function = "i2c1";
+				};
+			};
+
+			i2c1-gpio {
+				phandle = <0x02>;
+
+				conf {
+					groups = "gpio0_24_grp\0gpio0_25_grp";
+					slew-rate = <0x01>;
+					io-standard = <0x01>;
+				};
+
+				mux {
+					groups = "gpio0_24_grp\0gpio0_25_grp";
+					function = "gpio0";
+				};
+			};
+
+			gem3-default {
+				phandle = <0x06>;
+
+				conf {
+					groups = "ethernet3_0_grp";
+					slew-rate = <0x01>;
+					io-standard = <0x01>;
+				};
+
+				conf-rx {
+					pins = "MIO70\0MIO72\0MIO74";
+					bias-high-impedance;
+					low-power-disable;
+				};
+
+				conf-bootstrap {
+					pins = "MIO71\0MIO73\0MIO75";
+					bias-disable;
+					low-power-disable;
+				};
+
+				conf-tx {
+					pins = "MIO64\0MIO65\0MIO66\0MIO67\0MIO68\0MIO69";
+					bias-disable;
+					low-power-enable;
+				};
+
+				conf-mdio {
+					groups = "mdio3_0_grp";
+					slew-rate = <0x01>;
+					io-standard = <0x01>;
+					bias-disable;
+				};
+
+				mux-mdio {
+					function = "mdio3";
+					groups = "mdio3_0_grp";
+				};
+
+				mux {
+					function = "ethernet3";
+					groups = "ethernet3_0_grp";
+				};
+			};
+
+			usb0-default {
+				phandle = <0x04>;
+
+				conf {
+					groups = "usb0_0_grp";
+					slew-rate = <0x01>;
+					io-standard = <0x01>;
+				};
+
+				conf-rx {
+					pins = "MIO52\0MIO53\0MIO55";
+					bias-high-impedance;
+				};
+
+				conf-tx {
+					pins = "MIO54\0MIO56\0MIO57\0MIO58\0MIO59\0MIO60\0MIO61\0MIO62\0MIO63";
+					bias-disable;
+				};
+
+				mux {
+					groups = "usb0_0_grp";
+					function = "usb0";
+				};
+			};
+
+			sdhci1-default {
+				phandle = <0x05>;
+
+				conf {
+					groups = "sdio1_0_grp";
+					slew-rate = <0x01>;
+					io-standard = <0x01>;
+					bias-disable;
+				};
+
+				conf-cd {
+					groups = "sdio1_cd_0_grp";
+					bias-high-impedance;
+					bias-pull-up;
+					slew-rate = <0x01>;
+					io-standard = <0x01>;
+				};
+
+				mux-cd {
+					groups = "sdio1_cd_0_grp";
+					function = "sdio1_cd";
+				};
+
+				mux {
+					groups = "sdio1_0_grp";
+					function = "sdio1";
+				};
+			};
+		};
+	};
+
+	fragment15 {
+		target = <0xffffffff>;
+
+		__overlay__ {
+			status = "okay";
+			pinctrl-names = "default";
+			pinctrl-0 = <0x08>;
+		};
+	};
+
+	__symbols__ {
+		u14 = "/fragment1/__overlay__/ina260@40";
+		usbhub = "/fragment10/__overlay__/usb5744";
+		mdio = "/fragment13/__overlay__/mdio";
+		phy0 = "/fragment13/__overlay__/mdio/ethernet-phy@1";
+		pinctrl_uart1_default = "/fragment14/__overlay__/uart1-default";
+		pinctrl_i2c1_default = "/fragment14/__overlay__/i2c1-default";
+		pinctrl_i2c1_gpio = "/fragment14/__overlay__/i2c1-gpio";
+		pinctrl_gem3_default = "/fragment14/__overlay__/gem3-default";
+		pinctrl_usb0_default = "/fragment14/__overlay__/usb0-default";
+		pinctrl_sdhci1_default = "/fragment14/__overlay__/sdhci1-default";
+	};
+
+	__fixups__ {
+		i2c1 = "/fragment1:target:0";
+		gpio = "/fragment1/__overlay__:scl-gpios:0\0/fragment1/__overlay__:sda-gpios:0\0/fragment10/__overlay__/usb5744:reset-gpios:0\0/fragment13/__overlay__/mdio:reset-gpios:0";
+		amba = "/fragment1a:target:0";
+		serdes = "/fragment2:target:0";
+		sata = "/fragment3:target:0";
+		lane3 = "/fragment3/__overlay__:phys:0";
+		zynqmp_dpsub = "/fragment4:target:0";
+		lane1 = "/fragment4/__overlay__:phys:0";
+		lane0 = "/fragment4/__overlay__:phys:20";
+		xlnx_dpdma = "/fragment9:target:0";
+		usb0 = "/fragment10:target:0";
+		dwc3_0 = "/fragment11:target:0";
+		lane2 = "/fragment11/__overlay__:phys:0";
+		sdhci1 = "/fragment12:target:0";
+		gem3 = "/fragment13:target:0";
+		pinctrl0 = "/fragment14:target:0";
+		uart1 = "/fragment15:target:0";
+	};
+
+	__local_fixups__ {
+
+		fragment1 {
+
+			__overlay__ {
+				pinctrl-0 = <0x00>;
+				pinctrl-1 = <0x00>;
+			};
+		};
+
+		fragment1a {
+
+			__overlay__ {
+
+				ina260-u14 {
+					io-channels = <0x00 0x08 0x10>;
+				};
+			};
+		};
+
+		fragment10 {
+
+			__overlay__ {
+				pinctrl-0 = <0x00>;
+			};
+		};
+
+		fragment12 {
+
+			__overlay__ {
+				pinctrl-0 = <0x00>;
+			};
+		};
+
+		fragment13 {
+
+			__overlay__ {
+				pinctrl-0 = <0x00>;
+				phy-handle = <0x00>;
+			};
+		};
+
+		fragment15 {
+
+			__overlay__ {
+				pinctrl-0 = <0x00>;
+			};
+		};
+	};
+};
