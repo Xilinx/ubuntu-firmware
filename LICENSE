@@ -116,6 +116,6 @@ the GNU General Public License along with this program; if not, see
 SPDX-License-Identifier: GPL-2.0 /
 
 FILES:
-xlnx-kria/firmware/* 
+xlnx-kria-firmware/* 
 --------------------------------------------------------------------------------
 
