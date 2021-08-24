@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: GPL-2.0
 /*
- * dts file for KV260 DP subsystem
+ * KV260 Base Linux DTS
  *
  * (C) Copyright 2021, Xilinx, Inc.
  *
