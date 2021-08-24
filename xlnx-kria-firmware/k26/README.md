@@ -17,6 +17,7 @@ During the hand-off to Linux, the base device tree used during boot is extended 
 |   `zynqmp-sck-kv-g-revZ.dts`           | Revision Z Carrier Card DTS       |
 |   `zynqmp-sck-kv-g-rev1.dts`           | Revision 1.0 Carrier Card DTS     |
 |   `zynqmp-sck-kv-g-dp.dts`             | Display Port DTS                  |
+|   `zynqmp-sck-kv-g-revB.dts`           | Revision B Carrier Card DTS       |
 
 Some device tree files - such as the Display Port DTS noted in the table above - are loaded after Linux has started and are used to support specific reference or demo applications.
 
@@ -35,6 +36,7 @@ dtc -I dts -O dtb -o system.dtb system.dts -p 0x1000
 dtc -I dts -O dtb -o zynqmp-sck-kv-g-rev1.dtbo zynqmp-sck-kv-g-rev1.dts
 dtc -I dts -O dtb -o zynqmp-sck-kv-g-revZ.dtbo zynqmp-sck-kv-g-revZ.dts
 dtc -I dts -O dtb -o zynqmp-sck-kv-g-dp.dtbo zynqmp-sck-kv-g-dp.dts
+dtc -I dts -O dtb -o zynqmp-sck-kv-g-revB.dtbo zynqmp-sck-kv-g-revB.dts
 ```
 
 ---
