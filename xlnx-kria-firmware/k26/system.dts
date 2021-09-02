@@ -808,12 +808,14 @@
 					buck1 {
 						regulator-name = "da9131_buck1";
 						regulator-boot-on;
+						regulator-always-on;
 						phandle = <0x57>;
 					};
 
 					buck2 {
 						regulator-name = "da9131_buck2";
 						regulator-boot-on;
+						regulator-always-on;
 						phandle = <0x58>;
 					};
 				};
@@ -829,6 +831,7 @@
 					buck1 {
 						regulator-name = "da9130_buck1";
 						regulator-boot-on;
+						regulator-always-on;
 						phandle = <0x5a>;
 					};
 				};
