@@ -2367,8 +2367,6 @@
 		#size-cells = <0x02>;
 		compatible = "simple-bus";
 		ranges;
-		phandle = <0xab>;
-
 
 	};
 
