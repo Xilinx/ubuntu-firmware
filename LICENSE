@@ -25,23 +25,20 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 Files:
 xlnx-firmware/zcu106/zcu106_system.dtb
+xlnx-firmware/zcu106/zcu106_system.dts
 xlnx-firmware/zcu106/zcu106_bootgen.bif
-xlnx-firmware/zcu106/zcu106_system.bit
 xlnx-firmware/zcu106/zcu106_zynqmp_fsbl.elf
 xlnx-firmware/zcu106/zcu106_pmufw.elf
-xlnx-firmware/zcu106/dpu.xclbin 
 xlnx-firmware/zcu104/zcu104_zynqmp_fsbl.elf
-xlnx-firmware/zcu104/zcu104_system.bit
 xlnx-firmware/zcu104/zcu104_bootgen.bif
 xlnx-firmware/zcu104/zcu104_system.dtb
+xlnx-firmware/zcu104/zcu104_system.dts
 xlnx-firmware/zcu104/zcu104_pmufw.elf
-xlnx-firmware/zcu104/dpu.xclbin
 xlnx-firmware/zcu102/zcu102_bootgen.bif
-xlnx-firmware/zcu102/zcu102_system.bit
 xlnx-firmware/zcu102/zcu102_zynqmp_fsbl.elf
 xlnx-firmware/zcu102/zcu102_system.dtb
+xlnx-firmware/zcu102/zcu102_system.dts
 xlnx-firmware/zcu102/zcu102_pmufw.elf
-xlnx-firmware/zcu102/dpu.xclbin
 xlnx-firmware/common/image-selector/boot.bin
 xlnx-firmware/common/xilinx-hdmi-rx-edid.bin
 
@@ -94,9 +91,9 @@ License Identifiers that are here available: http://spdx.org/licenses/
 
 
 Files: 
-xlnx-firmware/zcu102/bl31.elf
-xlnx-firmware/zcu104/bl31.elf
-xlnx-firmware/zcu106/bl31.elf
+xlnx-firmware/zcu102/zcu102_bl31.elf
+xlnx-firmware/zcu104/zcu104_bl31.elf
+xlnx-firmware/zcu106/zcu106_bl31.elf
 
 ---------------------------------------------------------------------------------------------------
 
