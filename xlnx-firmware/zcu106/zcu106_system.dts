@@ -2351,15 +2351,14 @@
 		clock-frequency = <0x6cfd9c8>;
 		phandle = <0x18>;
 	};
-	
+
 	amba_pl@0 {
 		#address-cells = <0x02>;
 		#size-cells = <0x02>;
 		compatible = "simple-bus";
 		ranges;
-	
 
-	};
+	};	
 
 	aliases {
 		ethernet0 = "/axi/ethernet@ff0e0000";
