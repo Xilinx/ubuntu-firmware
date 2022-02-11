@@ -2370,14 +2370,6 @@
 		phandle = <0x18>;
 	};
 
-	amba_pl@0 {
-		#address-cells = <0x02>;
-		#size-cells = <0x02>;
-		compatible = "simple-bus";
-		ranges;
-
-	};
-
 	aliases {
 		ethernet0 = "/axi/ethernet@ff0e0000";
 		i2c0 = "/axi/i2c@ff020000";
@@ -2561,8 +2553,5 @@
 		dp_aclk = "/dp_aclk";
 		ref48 = "/ref48M";
 		refhdmi = "/refhdmi";
-		amba_pl = "/amba_pl@0";
-		axi_intc_0 = "/amba_pl@0/interrupt-controller@80020000";
-		misc_clk_0 = "/amba_pl@0/misc_clk_0";
 	};
 };

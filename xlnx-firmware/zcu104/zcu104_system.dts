@@ -1764,14 +1764,6 @@
 		phandle = <0x18>;
 	};
 
-	amba_pl@0 {
-		#address-cells = <0x02>;
-		#size-cells = <0x02>;
-		compatible = "simple-bus";
-		ranges;
-
-	};
-
 	aliases {
 		ethernet0 = "/axi/ethernet@ff0e0000";
 		i2c0 = "/axi/i2c@ff030000";
@@ -1919,17 +1911,5 @@
 		clock_8t49n287_5 = "/clk125";
 		clock_8t49n287_2 = "/clk26";
 		clock_8t49n287_3 = "/clk27";
-		amba_pl = "/amba_pl@0";
-		axi_intc_0 = "/amba_pl@0/interrupt-controller@80000000";
-		v_frmbuf_rd_0 = "/amba_pl@0/v_frmbuf_rd@a0000000";
-		misc_clk_0 = "/amba_pl@0/misc_clk_0";
-		v_frmbuf_wr_0 = "/amba_pl@0/v_frmbuf_wr@a0010000";
-		vcu_0 = "/amba_pl@0/vcu@a0100000";
-		encoder = "/amba_pl@0/vcu@a0100000/al5e@a0100000";
-		decoder = "/amba_pl@0/vcu@a0100000/al5d@a0120000";
-		misc_clk_1 = "/amba_pl@0/misc_clk_1";
-		misc_clk_2 = "/amba_pl@0/misc_clk_2";
-		vcu_ddr4_controller_0 = "/amba_pl@0/vcu_ddr4_controller@4800000000";
-		misc_clk_3 = "/amba_pl@0/misc_clk_3";
 	};
 };
