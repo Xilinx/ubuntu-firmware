@@ -39,5 +39,17 @@ dtc -I dts -O dtb -o zynqmp-sck-kv-g-dp.dtbo zynqmp-sck-kv-g-dp.dts
 dtc -I dts -O dtb -o zynqmp-sck-kv-g-revB.dtbo zynqmp-sck-kv-g-revB.dts
 ```
 
+Xilinx Vivado 2022.1 / Ubuntu 22.04 LTS Release Files
+-----------------------------------------------------
+For the Vivado 2022.1 release, the Kria DTS files are now found in the public U-Boot source tree here: https://github.com/Xilinx/u-boot-xlnx/tree/master/arch/arm/dts
+
+Specific files of interest for 2022.1 are:
+- zynqmp-sck-kr-g-revA.dts
+- zynqmp-sck-kr-g-revB.dts
+- zynqmp-sck-kv-g-dp.dts
+- zynqmp-sck-kv-g-revA.dts
+- zynqmp-sck-kv-g-revA-pl.dts
+- zynqmp-sck-kv-g-revB.dts
+
 ---
 (c) Copyright 2021 Xilinx, Inc. All rights reserved.
