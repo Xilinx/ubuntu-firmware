@@ -3,4 +3,4 @@ This is the set of firmware files that makeup the xlnx-kria-firmware debian pack
 
 
 ---
-(c) Copyright 2021 Xilinx, Inc. All rights reserved.
+Copyright (C) 2021 - 2022 Advanced Micro Devices, Inc / Xilinx, Inc All rights reserved.
