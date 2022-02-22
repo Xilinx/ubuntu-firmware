@@ -33,7 +33,10 @@ dtc -I dts -O dtb -o zynqmp-sck-kv-g-revB.dtbo zynqmp-sck-kv-g-revB.dts
 ```
 
 Alternatively, the device tree files can be built using the Linux kernel `make` infrastructure
-`$ make ARCH=arm64 xilinx_zynqmp_defconfig` 
-`$ make ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu- dtbs`
+```
+$ make ARCH=arm64 xilinx_zynqmp_defconfig
+$ make ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu- dtbs
+```
+
 ---
 Copyright (C) 2021 - 2022 Advanced Micro Devices, Inc / Xilinx, Inc All rights reserved.
