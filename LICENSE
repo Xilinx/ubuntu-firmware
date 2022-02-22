@@ -6,7 +6,7 @@ permissive binary-only license; source files are not provided.  While the follow
 permissive license is similar to the MIT open source license, this it is NOT the MIT open source 
 license or any other OSI-approved open-source license.
 
-Copyright (c) 2021 Xilinx, Inc.
+Copyright (c) 2022 Advanced Micro Devices, Inc / Xilinx, Inc
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and 
 associated documentation files (the "Software"), to deal in the Software without restriction, including 
@@ -86,7 +86,7 @@ Individual files contain the following tag instead of the full license text.
 
 ::
 
-    SPDX-License-Identifier:    BSD-3-Clause
+SPDX-License-Identifier:    BSD-3-Clause
 
 This enables machine processing of license information based on the SPDX
 License Identifiers that are here available: http://spdx.org/licenses/
@@ -102,7 +102,7 @@ xlnx-firmware/zcu106/zcu106_bl31.elf
 
 COPYRIGHT TEXT:
 ---------------
-Copyright (C) 2010 - 2021 <Xilinx Inc.> This program is free software; you can
+Copyright (C) 2010 - 2022 <Advanced Micro Devices, Inc / Xilinx, Inc> This program is free software; you can
 redistribute it and/or modify it under the terms of the GNU General Public
 License as published by the Free Software Foundation; either version 2 of the
 License, or (at your option) any later version. This program is distributed in
