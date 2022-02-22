@@ -19,4 +19,4 @@ Each board-specific bootXXXX.bin in the certifed Ubuntu ZCU10x image from Canoni
 
 
 ---
-Copyright (C) 2021 - 2022 Xilinx, Inc. All rights reserved.
+Copyright (C) 2021 - 2022 Advanced Micro Devices, Inc / Xilinx, Inc All rights reserved.
