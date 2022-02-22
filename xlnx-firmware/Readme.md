@@ -7,6 +7,8 @@ Each board-specific bootXXXX.bin in the certifed Ubuntu ZCU10x image from Canoni
 - ZCU102: [PetaLinux 2022.1 BSP]()
 - ZCU104: [PetaLinux 2022.1 BSP]()
 - ZCU106: [PetaLinux 2022.1 BSP]()
+- ZCU111: [PetaLinux 2022.1 BSP]()
+
 *_NOTE_: The 22.04 firmware images do NOT contain programmable logic (PL) resources*
 
 # Ubuntu 20.04 LTS Release:
