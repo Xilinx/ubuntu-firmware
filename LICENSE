@@ -24,25 +24,30 @@ WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN 
 SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 Files:
+xlnx-firmware/zcu111/zcu111_bootgen.bif
+xlnx-firmware/zcu111/zcu111_zynqmp_fsbl.elf
+xlnx-firmware/zcu111/zcu111_pmufw.elf
+
 xlnx-firmware/zcu106/zcu106_bootgen.bif
 xlnx-firmware/zcu106/zcu106_zynqmp_fsbl.elf
 xlnx-firmware/zcu106/zcu106_pmufw.elf
+
 xlnx-firmware/zcu104/zcu104_zynqmp_fsbl.elf
 xlnx-firmware/zcu104/zcu104_bootgen.bif
 xlnx-firmware/zcu104/zcu104_pmufw.elf
+
 xlnx-firmware/zcu102/zcu102_bootgen.bif
 xlnx-firmware/zcu102/zcu102_zynqmp_fsbl.elf
 xlnx-firmware/zcu102/zcu102_pmufw.elf
+
 xlnx-firmware/common/image-selector/boot.bin
 xlnx-firmware/common/xilinx-hdmi-rx-edid.bin
+
+xlnx-firmware/zcu111/zcu111_system.dtb
 xlnx-firmware/zcu106/zcu106_system.dtb
 xlnx-firmware/zcu104/zcu104_system.dtb
-xlnx-firmware/zcu102/zcu102_system.dtb
 
 ---------------------------------------------------------------------------------------------------
-
-
-
 
 COPYRIGHT TEXT:
 ---------------
