@@ -36,4 +36,4 @@ Alternatively, the device tree files can be built using the Linux kernel `make` 
 `$ make ARCH=arm64 xilinx_zynqmp_defconfig` 
 `$ make ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu- dtbs`
 ---
-(c) Copyright 2021 Xilinx, Inc. All rights reserved.
+Copyright (C) 2021 - 2022 Advanced Micro Devices, Inc / Xilinx, Inc All rights reserved.
