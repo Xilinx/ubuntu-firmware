@@ -1,9 +1,11 @@
 Introduction and Overview
 -------------------------
-This directory contains device tree source (.dts) files the Kria SOMs.  The Kria SOMs make extensive use of device tree and device tree overlays in order to enable maximum flexibility.  The Kria K26 software architecture starts with a minimal device tree during initial boot in the on-board QSPI and selectively adds additional device tree overlays as boot progresses.  The Kria K26 Starter Kit QSPI image comes pre-programmed from the Xilinx factory and includes the following components and should not be modified:
+This directory contains details on using the device tree source (.dts) files for Kria SOMs.  The Kria SOMs make extensive use of device tree and device tree overlays in order to enable maximum flexibility.  The Kria software architecture begins with a minimal device tree file in the QSPI firmware and loads progressively more complete representations of the target system programmatically at runtime.  For full detailsm, please see the Kria wiki at https://xilinx-wiki.atlassian.net/wiki/spaces/A/pages/1641152513/Kria+K26+SOM
+
+The Kria Starter Kit QSPI image comes pre-programmed from the Xilinx factory and includes the following components and should not be modified:
 
 * The Xilinx First Stage Boot Loader (FSBL)
-* The initial U-Boot device tree blog (.dtb)
+* The initial U-Boot device tree blob (.dtb)
 * The U-Boot binary (.elf)
 
 Kria K26 SOM Device Tree Files - Xilinx Vivado 2022.1 / Ubuntu 22.04 LTS Release
@@ -24,6 +26,8 @@ The Revision A and Revision Z boards use the same DTS file.  The Revision B and 
 Building the Kria K26 SOM Device Tree Files
 --------------------------------------------
 The device tree files can be build using the standard open source device tree compiler (dtc) tool located at https://git.kernel.org/pub/scm/utils/dtc/dtc.git
+
+For example:
 ```
 dtc -I dts -O dtb -o zynqmp-sck-kv-g-rev1.dtbo zynqmp-sck-kv-g-rev1.dts
 dtc -I dts -O dtb -o zynqmp-sck-kv-g-revZ.dtbo zynqmp-sck-kv-g-revZ.dts
