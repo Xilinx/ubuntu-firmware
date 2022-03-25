@@ -10,7 +10,7 @@ The Kria Starter Kit QSPI image comes pre-programmed from the Xilinx factory and
 
 Kria K26 SOM Device Tree Files - Xilinx Vivado 2022.1 / Ubuntu 22.04 LTS Release
 -----------------------------------------------------
-For the Vivado 2022.1 release, the Kria DTS files are now found in the public Linux source tree.  They were committed here: https://github.com/Xilinx/linux-xlnx/commit/82e8d29414c088196dbfd227129d409e16e7e705
+For the Vivado 2022.1 release, the Kria DTS files are now found in the public Linux source tree.  They were committed here: https://github.com/Xilinx/linux-xlnx/commit/70604467dc949d3b77eabaa1288365cb25b2ec23
 
 |   File Name                            | Description                       |
 |   :-------------------------------     | :------------------------------   |
