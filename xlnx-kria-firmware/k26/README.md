@@ -10,29 +10,22 @@ The Kria Starter Kit QSPI image comes pre-programmed from the Xilinx factory and
 
 Kria K26 SOM Device Tree Files - Xilinx Vivado 2022.1 / Ubuntu 22.04 LTS Release
 -----------------------------------------------------
-For the Vivado 2022.1 release, the Kria DTS files are now found in the public Linux source tree.  They were committed here: https://github.com/Xilinx/linux-xlnx/commit/70604467dc949d3b77eabaa1288365cb25b2ec23
+For the Vivado 2022.1 release, the Kria DTS files are now found in the public Linux source tree (/arch/arm64/boot/dts).  To ensure you are using the most up-to-date DTS structure, use commit https://github.com/Xilinx/linux-xlnx/commit/bb5e7021ad6f5eb9cec6904264a227931326e2a3 or later
 
-|   File Name                            | Description                       |
-|   :-------------------------------     | :------------------------------   |
-|   `zynqmp-sck-kr-g-revA.dts`           | Revision A KR Carrier Card DTS    |
-|   `zynqmp-sck-kr-g-revB.dts`           | Revision B KR Carrier Card DTS    |
-|   `zynqmp-sck-kv-g-revA.dts`           | Revision A/Z KV Carrier Card DTS  |
-|   `zynqmp-sck-kv-g-revB.dts`           | Revision B/1 KV Carrier Card DTS  |
+|   File Name                            | Description                          |
+|   :-------------------------------     | :------------------------------      |
+|   `zynqmp-sck-kr-g-revA.dts`           | Revision A KR Carrier Card DTS       |
+|   `zynqmp-sck-kr-g-revB.dts`           | Revision B KR Carrier Card DTS       |
+|   `zynqmp-sck-kv-g-revA.dts`           | Revision A or Z KV Carrier Card DTS  |
+|   `zynqmp-sck-kv-g-revB.dts`           | Revision B or 1 KV Carrier Card DTS  |
 
 Some device tree files - such as the Display Port DTS noted in the table above - are loaded after Linux has started and are used to support specific reference or demo applications.
 
-The Revision A and Revision Z boards use the same DTS file.  The Revision B and Revision 1 boards use the same DTS file.
+To be clear. the Revision A and Revision Z boards use the same DTS file.  Likewise, the Revision B and Revision 1 boards use the same DTS file.
 
 Building the Kria K26 SOM Device Tree Files
 --------------------------------------------
 The device tree files can be build using the standard open source device tree compiler (dtc) tool located at https://git.kernel.org/pub/scm/utils/dtc/dtc.git
-
-For example:
-```
-dtc -I dts -O dtb -o zynqmp-sck-kv-g-rev1.dtbo zynqmp-sck-kv-g-rev1.dts
-dtc -I dts -O dtb -o zynqmp-sck-kv-g-revZ.dtbo zynqmp-sck-kv-g-revZ.dts
-dtc -I dts -O dtb -o zynqmp-sck-kv-g-revB.dtbo zynqmp-sck-kv-g-revB.dts
-```
 
 Alternatively, the device tree files can be built using the Linux kernel `make` infrastructure
 ```
