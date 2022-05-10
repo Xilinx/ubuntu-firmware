@@ -1,3 +1,12 @@
+// SPDX-License-Identifier: GPL-2.0
+/*
+ * ZCU106 Linux DTS
+ *
+ * (C) Copyright 2022, Xilinx, Inc.
+ *
+ * Akshay Belsare <Akshay.Belsare@xilinx.com>
+ *
+*/
 /dts-v1/;
 
 / {
