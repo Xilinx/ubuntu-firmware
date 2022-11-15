@@ -2113,7 +2113,7 @@
 	};
 
 	chosen {
-		nvmem0 = "/axi/i2c@ff030000/i2c-mux@74/i2c@0/eeprom@54";
+		xlnx,eeprom = "/axi/i2c@ff030000/i2c-mux@74/i2c@0/eeprom@54";
 		bootargs = " earlycon console=ttyPS0,115200 clk_ignore_unused init_fatal_sh=1";
 		stdout-path = "serial0:115200n8";
 	};
