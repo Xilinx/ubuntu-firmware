@@ -578,6 +578,17 @@
 				#size-cells = <0x00>;
 				reg = <0x74>;
 
+				i2c@0 {
+					#address-cells = <1>;
+					#size-cells = <0>;
+					reg = <0>;
+
+					eeprom: eeprom@54 {	/* U34 */
+						compatible = "st,24c128", "atmel,24c128";
+						reg = <0x54>;
+					};
+				};
+
 				i2c@6 {
 					#address-cells = <0x01>;
 					#size-cells = <0x00>;
@@ -1000,6 +1011,7 @@
 	chosen {
 		bootargs = "console=ttyAMA0  earlycon=pl011,mmio32,0xFF000000,115200n8 clk_ignore_unused init_fatal_sh=1";
 		stdout-path = "serial0:115200n8";
+		xlnx,eeprom = &eeprom;
 	};
 
 	aliases {
