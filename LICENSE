@@ -40,13 +40,22 @@ xlnx-firmware/zcu102/zcu102_bootgen.bif
 xlnx-firmware/zcu102/zcu102_zynqmp_fsbl.elf
 xlnx-firmware/zcu102/zcu102_pmufw.elf
 
+xlnx-versal-firmware/vck190/binary_container_1.xclbin
+xlnx-versal-firmware/vck190/bootgen.bif
+xlnx-versal-firmware/vck190/plm.elf
+xlnx-versal-firmware/vck190/psmfw.elf
+xlnx-versal-firmware/vck190/vpl_gen_fixed.pdi
+
 xlnx-firmware/common/image-selector/boot.bin
 xlnx-firmware/common/xilinx-hdmi-rx-edid.bin
+xlnx-versal-firmware/common/image-selector/boot.bin
+xlnx-versal-firmware/common/xilinx-hdmi-rx-edid.bin
 
 xlnx-firmware/zcu111/zcu111_system.dtb
 xlnx-firmware/zcu106/zcu106_system.dtb
 xlnx-firmware/zcu104/zcu104_system.dtb
 xlnx-firmware/zcu104/zcu102_system.dtb
+xlnx-versal-firmware/vck190/system_default.dtb
 
 ---------------------------------------------------------------------------------------------------
 
@@ -98,6 +107,7 @@ xlnx-firmware/zcu102/zcu102_bl31.elf
 xlnx-firmware/zcu104/zcu104_bl31.elf
 xlnx-firmware/zcu106/zcu106_bl31.elf
 xlnx-firmware/zcu106/zcu111_bl31.elf
+xlnx-versal-firmware/vck190/bl31.elf
 
 ---------------------------------------------------------------------------------------------------
 
@@ -122,5 +132,6 @@ xlnx-firmware/zcu106/zcu111_system.dts
 xlnx-firmware/zcu106/zcu106_system.dts
 xlnx-firmware/zcu104/zcu104_system.dts
 xlnx-firmware/zcu102/zcu102_system.dts
+xlnx-versal-firmware/vck190/system_default.dts
 --------------------------------------------------------------------------------
 
