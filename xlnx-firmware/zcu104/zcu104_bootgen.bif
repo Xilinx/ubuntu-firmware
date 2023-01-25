@@ -1,8 +1,0 @@
-the_ROM_image:
-{
-	[bootloader, destination_cpu=a53-0] /usr/share/xlnx-firmware/zcu104/zcu104_zynqmp_fsbl.elf
-	[pmufw_image] /usr/share/xlnx-firmware/zcu104/zcu104_pmufw.elf
-	[destination_cpu=a53-0, exception_level=el-3, trustzone] /usr/share/xlnx-firmware/zcu104/zcu104_bl31.elf
-	[destination_cpu=a53-0, load=0x00100000] /usr/share/xlnx-firmware/zcu104/zcu104_system.dtb
-	[destination_cpu=a53-0, exception_level=el-2] /usr/lib/u-boot/xilinx_zynqmp_virt/u-boot.elf
-}

@@ -1,5 +1,5 @@
-# ubuntu-firmware
-A collection of firmware files used to populate the Xilinx firmware debian pacakges in the Ubuntu Archive
+# buildroot-firmware
+A collection of firmware files used to enable buildroot support for Xilinx zynqmp, kria, and versal products. 
 
 
 ---

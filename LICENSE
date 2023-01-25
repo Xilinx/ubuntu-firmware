@@ -48,7 +48,14 @@ xlnx-firmware/zcu106/zcu106_system.dtb
 xlnx-firmware/zcu104/zcu104_system.dtb
 xlnx-firmware/zcu104/zcu102_system.dtb
 
----------------------------------------------------------------------------------------------------
+kv260/kv260_pmufw.elf
+zcu102/zcu102_pmufw.elf
+zcu106/zcu106_pmufw.elf
+vck190/vck190_plm.elf
+vck190/vck190_psmfw.elf
+vck190/vck190_vpl_gen_fixed.pdi
+
+--------------------------------------------------------------------------------------------------:
 
 COPYRIGHT TEXT:
 ---------------
