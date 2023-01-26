@@ -25,6 +25,7 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 Files:
 kv260/kv260_pmufw.elf
+kr260/kr260_pmufw.elf
 zcu102/zcu102_pmufw.elf
 zcu106/zcu106_pmufw.elf
 vck190/vck190_plm.elf
