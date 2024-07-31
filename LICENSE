@@ -2,25 +2,26 @@ COPYRIGHT TEXT:
 ---------------
 
 The files distributed with this project are provided in binary form under the following free and
-permissive binary-only license; source files are not provided.  While the following free and 
-permissive license is similar to the MIT open source license, this it is NOT the MIT open source 
+permissive binary-only license; source files are not provided.  While the following free and
+permissive license is similar to the MIT open source license, this it is NOT the MIT open source
 license or any other OSI-approved open-source license.
 
 Copyright (c) 2022 Xilinx, Inc
+Copyright (c) 2022 - 2024, Advanced Micro Devices, Inc
 
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and 
-associated documentation files (the "Software"), to deal in the Software without restriction, including 
-without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or 
-sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject 
-to the following conditions: 
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and
+associated documentation files (the "Software"), to deal in the Software without restriction, including
+without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject
+to the following conditions:
 
-The above copyright notice and this permission notice shall be included in all copies or substantial 
-portions of the Software. 
+The above copyright notice and this permission notice shall be included in all copies or substantial
+portions of the Software.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT 
-NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. 
-IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, 
-WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE 
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT
+NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
 SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 Files:
@@ -46,6 +47,11 @@ xlnx-versal-firmware/vck190/plm.elf
 xlnx-versal-firmware/vck190/psmfw.elf
 xlnx-versal-firmware/vck190/vpl_gen_fixed.pdi
 
+xlnx-versal-firmware/vek280/bootgen.bif
+xlnx-versal-firmware/vek280/plm.elf
+xlnx-versal-firmware/vek280/psmfw.elf
+xlnx-versal-firmware/vek280/vpl_gen_fixed_boot.pdi
+
 xlnx-firmware/common/image-selector/boot.bin
 xlnx-firmware/common/xilinx-hdmi-rx-edid.bin
 xlnx-versal-firmware/common/image-selector/boot.bin
@@ -56,6 +62,7 @@ xlnx-firmware/zcu106/zcu106_system.dtb
 xlnx-firmware/zcu104/zcu104_system.dtb
 xlnx-firmware/zcu104/zcu102_system.dtb
 xlnx-versal-firmware/vck190/system_default.dtb
+xlnx-versal-firmware/vek280/system.dtb
 
 ---------------------------------------------------------------------------------------------------
 
@@ -102,27 +109,29 @@ This enables machine processing of license information based on the SPDX
 License Identifiers that are here available: http://spdx.org/licenses/
 
 
-Files: 
+Files:
 xlnx-firmware/zcu102/zcu102_bl31.elf
 xlnx-firmware/zcu104/zcu104_bl31.elf
 xlnx-firmware/zcu106/zcu106_bl31.elf
 xlnx-firmware/zcu106/zcu111_bl31.elf
 xlnx-versal-firmware/vck190/bl31.elf
+xlnx-versal-firmware/vek280/bl31.elf
 
 ---------------------------------------------------------------------------------------------------
 
 
 COPYRIGHT TEXT:
 ---------------
-Copyright (C) 2010 - 2022 <Xilinx, Inc> This program is free software; you can
-redistribute it and/or modify it under the terms of the GNU General Public
-License as published by the Free Software Foundation; either version 2 of the
-License, or (at your option) any later version. This program is distributed in
-the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the
-implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
-GNU General Public License for more details. You should have received a copy of
-the GNU General Public License along with this program; if not, see
-<http://www.gnu.org/licenses/>
+Copyright (C) 2010 - 2022 <Xilinx, Inc>
+Copyright (c) 2022 - 2024, Advanced Micro Devices, Inc
+This program is free software; you can redistribute it and/or modify it under
+the terms of the GNU General Public License as published by the Free Software
+Foundation; either version 2 of the License, or (at your option) any later
+version. This program is distributed in the hope that it will be useful, but
+WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or
+FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
+details. You should have received a copy of the GNU General Public License along
+with this program; if not, see <http://www.gnu.org/licenses/>
 
 SPDX-License-Identifier: GPL-2.0 /
 
@@ -133,5 +142,6 @@ xlnx-firmware/zcu106/zcu106_system.dts
 xlnx-firmware/zcu104/zcu104_system.dts
 xlnx-firmware/zcu102/zcu102_system.dts
 xlnx-versal-firmware/vck190/system_default.dts
+xlnx-versal-firmware/vek280/system.dts
 --------------------------------------------------------------------------------
 
