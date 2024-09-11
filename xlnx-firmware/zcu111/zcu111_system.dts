@@ -3,8 +3,7 @@
  * ZCU111 Linux DTS
  *
  * (C) Copyright 2022, Xilinx, Inc.
- *
- * Akshay Belsare <Akshay.Belsare@xilinx.com>
+ * (C) Copyright 2022-2024, Advanced Micro Devices, Inc.
  *
 */
 /dts-v1/;
