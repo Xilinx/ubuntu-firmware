@@ -1,15 +1,15 @@
 the_ROM_image:
 {
 image {
-	{ type=bootimage, file=/proj/xhdsswstaff1/mbollapa/source_code/ubuntu/VEK280_Cust_XSA2_PLNX2024.1/xilinx-vek280-2024.1/project-spec/hw-description/vpl_gen_fixed_boot.pdi }
-	{ type=bootloader, file=/proj/xhdsswstaff1/mbollapa/source_code/ubuntu/VEK280_Cust_XSA2_PLNX2024.1/xilinx-vek280-2024.1/images/linux/plm.elf }
-	{ core=psm, file=/proj/xhdsswstaff1/mbollapa/source_code/ubuntu/VEK280_Cust_XSA2_PLNX2024.1/xilinx-vek280-2024.1/images/linux/psmfw.elf }
+	{ type=bootimage, file=/usr/share/xlnx-versal-firmware/vek280/vek280_vpl_gen_fixed.pdi }
+	{ type=bootloader, file=/usr/share/xlnx-versal-firmware/vek280/vek280_plm.elf }
+	{ core=psm, file=/usr/share/xlnx-versal-firmware/vek280/vek280_psmfw.elf }
 
 }
 image {
 	id = 0x1c000000, name=apu_subsystem
-	{ type=raw, load=0x50000001000, file=/proj/xhdsswstaff1/mbollapa/source_code/ubuntu/VEK280_Cust_XSA2_PLNX2024.1/xilinx-vek280-2024.1/images/linux/system.dtb }
-	{ core=a72-0, exception_level=el-3, trustzone, file=/proj/xhdsswstaff1/mbollapa/source_code/ubuntu/VEK280_Cust_XSA2_PLNX2024.1/xilinx-vek280-2024.1/images/linux/bl31.elf }
-	{ core=a72-0, exception_level=el-2, file=/proj/xhdsswstaff1/mbollapa/source_code/ubuntu/VEK280_Cust_XSA2_PLNX2024.1/xilinx-vek280-2024.1/images/linux/u-boot.elf }
+	{ type=raw, load=0x50000001000, file=/usr/share/xlnx-versal-firmware/vek280/vek280_system.dtb }
+	{ core=a72-0, exception_level=el-3, trustzone, file=/usr/share/xlnx-versal-firmware/vek280/vek280_bl31.elf }
+	{ core=a72-0, exception_level=el-2, file=/usr/lib/u-boot/xilinx_versal_virt/u-boot.elf }
 }
 }

@@ -1,8 +1,8 @@
 the_ROM_image:
 {
-	[bootloader, destination_cpu=a53-0] /proj/xhdsswstaff1/amitn/prj/canonical/2024.1/zcu/zcu102/xilinx-zcu102-v2024.1-final.bsp/images/linux/zynqmp_fsbl.elf
-	[pmufw_image] /proj/xhdsswstaff1/amitn/prj/canonical/2024.1/zcu/zcu102/xilinx-zcu102-v2024.1-final.bsp/images/linux/pmufw.elf
-	[destination_cpu=a53-0, exception_level=el-3, trustzone] /proj/xhdsswstaff1/amitn/prj/canonical/2024.1/zcu/zcu102/xilinx-zcu102-v2024.1-final.bsp/images/linux/bl31.elf
-	[destination_cpu=a53-0, load=0x100000] /proj/xhdsswstaff1/amitn/prj/canonical/2024.1/zcu/zcu102/xilinx-zcu102-v2024.1-final.bsp/images/linux/system.dtb
-	[destination_cpu=a53-0, exception_level=el-2] /proj/xhdsswstaff1/amitn/prj/canonical/2024.1/zcu/zcu102/xilinx-zcu102-v2024.1-final.bsp/images/linux/u-boot.elf
+	[bootloader, destination_cpu=a53-0] /usr/share/xlnx-firmware/zcu102/zcu102_zynqmp_fsbl.elf
+	[pmufw_image] /usr/share/xlnx-firmware/zcu102/zcu102_pmufw.elf
+	[destination_cpu=a53-0, exception_level=el-3, trustzone] /usr/share/xlnx-firmware/zcu102/zcu102_bl31.elf
+	[destination_cpu=a53-0, load=0x100000] /usr/share/xlnx-firmware/zcu102/zcu102_system.dtb
+	[destination_cpu=a53-0, exception_level=el-2] /usr/lib/u-boot/xilinx_zynqmp_virt/u-boot.elf
 }
